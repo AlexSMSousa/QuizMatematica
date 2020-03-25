@@ -8,26 +8,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
-import com.alex.quizmatematica.databinding.FragmentGameWonBinding
+import com.alex.quizmatematica.databinding.FragmentGameOverBinding
 
 /**
  * A simple [Fragment] subclass.
  */
-class GameWonFragment : Fragment() {
+class GameOverFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding: FragmentGameWonBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
+       val binding: FragmentGameOverBinding =
+           DataBindingUtil.inflate(inflater, R.layout.fragment_game_over, container, false)
 
-        binding.nextMatchButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_gameWonFragment_to_gameFragment)
+        binding.tryAgainButton.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_gameOverFragment_to_gameFragment)
         }
 
         return binding.root
+
     }
 
 

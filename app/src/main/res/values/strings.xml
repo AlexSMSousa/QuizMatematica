@@ -6,4 +6,7 @@
     <string name="submit_button">Responder</string>
     <string name="start">Iniciar</string>
     <string name="title_android_quiz">QuiZ (%1$d/%2$d)</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="congratulation">Parabéns</string>
+    <string name="play_gain">Jogar novamente</string>
 </resources>

@@ -75,6 +75,7 @@ class GameFragment : Fragment() {
                     }
                 } else {
                     // Perdeu - Navigate para o gameOverFragment.
+                    Navigation.findNavController(view).navigate(R.id.action_gameFragment_to_gameOverFragment)
                 }
             }
         }

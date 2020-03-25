@@ -9,5 +9,5 @@
     <dimen name="answer_text_size">18sp</dimen>
     <dimen name="question_text_size">30sp</dimen>
     <dimen name="image_header_height">150dp</dimen>
-    <dimen name="game_over_height">350dp</dimen>
+    <dimen name="game_over_height">250dp</dimen>
 </resources>
