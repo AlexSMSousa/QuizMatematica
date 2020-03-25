@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.alex.quizmatematica.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -15,16 +16,16 @@ class GameFragment : Fragment() {
         val answers: List<String>)
 
     //Lista de questões e respostas - A primeira resposta sempre é a certa
-    private val questions: MutableList<Question> = mutableListOf(
-        Question(text = "Quanto é 1 X 7?",
+    val questions: MutableList<Question> = mutableListOf(
+        Question(text = "Quanto é 1 X 7 ?",
             answers = listOf("7", "8", "9", "0")),
-        Question(text = "Quanto é 2 X 3",
+        Question(text = "Quanto é 2 X 3 ?",
             answers = listOf("6", "3", "11", "9")),
-        Question(text = "Quanto é 5 X 4",
+        Question(text = "Quanto é 5 X 4 ?",
             answers = listOf("20", "35", "25", "15")),
-        Question(text = "Quanto é 4 X 3",
+        Question(text = "Quanto é 4 X 3 ?",
             answers = listOf("12", "13", "11", "14")),
-        Question(text = "Quanto é 7 X 8",
+        Question(text = "Quanto é 7 X 8 ?",
             answers = listOf("56", "55", "57", "59"))
 
     )
@@ -40,7 +41,7 @@ class GameFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
             inflater, R.layout.fragment_game, container, false)
 
-        // Embaralha as questões e coloca um indece na primeira
+        // Embaralha as questões e coloca um indice na primeira
         randomizeQuestions()
 
         // Bind com o layout
@@ -48,6 +49,7 @@ class GameFragment : Fragment() {
 
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
+
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
             // Não faça nada se o id for -1
             if (-1 != checkedId) {
@@ -65,9 +67,11 @@ class GameFragment : Fragment() {
                     if (questionIndex < numQuestions) {
                         currentQuestion = questions[questionIndex]
                         setQuestion()
-                      //  binding.invalidateAll()
+                        binding.invalidateAll()
                     } else {
                         //Venceu - Navigate para o gameWonFragment
+                        Navigation.findNavController(view).navigate(R.id.action_gameFragment_to_gameWonFragment)
+
                     }
                 } else {
                     // Perdeu - Navigate para o gameOverFragment.
