@@ -5,7 +5,6 @@
     tools:context="com.alex.quizmatematica.GameFragment">
 
     <data>
-
         <variable
             name="game"
             type="com.alex.quizmatematica.GameFragment" />
