@@ -3,5 +3,6 @@
 <h4>Architecture Components</h4>
 <ul>
   <li>Data Binding</li>
+  <li>Live Data</li>
   <li>Navigation Component</li>
 </ul>
