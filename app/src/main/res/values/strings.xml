@@ -9,4 +9,10 @@
     <string name="try_again">Tentar novamente</string>
     <string name="congratulation">Parabéns</string>
     <string name="play_gain">Jogar novamente</string>
+    <string name="about_body">Esse é um aplicativo de exemplo, que coloca em prática os conceitos do <b>Android JetPack</b>.\n\nSendo abordado aqui os <b>Architecture Components:</b>\n - Data Binding\n - LiveData\n - Navigation\n - Entre outros</string>
+    <string name="title_quiz">Quiz Matematica</string>
+    <string name="sobre">Sobre</string>
+    <string name="playing">Jogando</string>
+    <string name="game_over">Game Over</string>
+    <string name="About">Sobre</string>
 </resources>
