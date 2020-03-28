@@ -15,4 +15,5 @@
     <string name="playing">Jogando</string>
     <string name="game_over">Game Over</string>
     <string name="About">Sobre</string>
+    <string name="share_success_text">Acertei %1$d de %2$d pontos no QuizMatemática. Faça melhor se for capaz!</string>
 </resources>
