@@ -70,12 +70,13 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         //Venceu - Navigate para o gameWonFragment
-                        Navigation.findNavController(view).navigate(R.id.action_gameFragment_to_gameWonFragment)
+                        Navigation.findNavController(view)
+                            .navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
 
                     }
                 } else {
                     // Perdeu - Navigate para o gameOverFragment.
-                    Navigation.findNavController(view).navigate(R.id.action_gameFragment_to_gameOverFragment)
+                    Navigation.findNavController(view).navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }
         }
