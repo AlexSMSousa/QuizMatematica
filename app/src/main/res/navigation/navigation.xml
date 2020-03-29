@@ -60,4 +60,9 @@
         android:name="com.alex.quizmatematica.AboutFragment"
         android:label="@string/About"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/howToPlayFragment"
+        android:name="com.alex.quizmatematica.HowToPlayFragment"
+        android:label="Como Jogar??"
+        tools:layout="@layout/fragment_how_to_play" />
 </navigation>

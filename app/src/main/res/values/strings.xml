@@ -16,4 +16,6 @@
     <string name="game_over">Game Over</string>
     <string name="About">Sobre</string>
     <string name="share_success_text">Acertei %1$d de %2$d pontos no QuizMatemática. Faça melhor se for capaz!</string>
+    <string name="body_how_to_play">Para jogar, selecione a opção correta de cada pergunta Acima estará marcando qual pergunta você está e quantas faltam para serem respondidas. Não erre, pois esse jogo não aceita erros. Pense bem antes de responder e seja um vencedor!</string>
+    <string name="how_to_play_title">Como Jogar</string>
 </resources>
