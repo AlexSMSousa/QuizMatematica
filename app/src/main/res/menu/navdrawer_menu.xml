@@ -8,5 +8,5 @@
     <item
         android:id="@+id/aboutFragment"
         android:icon="@drawable/android"
-        android:title="@string/About" />
+        android:title="@string/about" />
 </menu>

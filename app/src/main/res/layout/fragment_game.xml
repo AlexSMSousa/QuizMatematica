@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.alex.quizmatematica.GameFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
             name="game"
-            type="com.alex.quizmatematica.GameFragment" />
+            type="com.alex.quizmatematica.GameViewModel" />
 
     </data>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.alex.quizmatematica.GameFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,14 +23,13 @@
             <ImageView
                 android:id="@+id/questionImage"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/image_header_height"
+                android:layout_height="150dp"
                 android:layout_marginStart="@dimen/horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/horizontal_margin"
-                android:layout_marginBottom="@dimen/vertical_margin"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toTopOf="@+id/questionText"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/android_category_simple" />
@@ -43,7 +43,7 @@
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
                 android:layout_marginBottom="@dimen/vertical_margin"
                 android:fontFamily="sans-serif"
-                android:text="@{game.currentQuestion.text}"
+                android:text="@{@string/how_much(game.currentQuestion.text)}"
                 android:textSize="@dimen/question_text_size"
                 android:textStyle="bold"
                 android:typeface="normal"
@@ -116,6 +116,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 
 </layout>

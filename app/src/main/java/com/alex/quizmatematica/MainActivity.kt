@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
+        setSupportActionBar(findViewById(R.id.my_toolbar))
+
         drawerLayout = binding.drawerLayout
 
         //Adicionar o botão voltar ao topo
